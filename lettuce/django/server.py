@@ -18,12 +18,27 @@ import os
 import sys
 import time
 import socket
-import httplib
-import urlparse
+
+# --- py3: port --- #
+import six
+# import httplib
+# import urlparse
+if six.PY2:
+    import httplib
+    import urlparse
+
+if six.PY3:
+    import http.client as httplib
+    import urllib.parse as urlparse
+    unicode = lambda x: str(x)
+
 import tempfile
 import multiprocessing
 
-from StringIO import StringIO
+# --- py3: port --- #
+# from StringIO import StringIO
+from six.moves import StringIO
+
 
 from django.conf import settings
 from django.core.handlers.wsgi import WSGIHandler
@@ -291,7 +306,7 @@ class DefaultServer(BaseServer):
             if getattr(settings, 'LETTUCE_SERVE_ADMIN_MEDIA', False):
                 msg += ' (as per settings.LETTUCE_SERVE_ADMIN_MEDIA=True)'
 
-            print "%s..." % msg
+            print("%s..." % msg)
 
         self._server.start()
         self._server.wait()
@@ -306,7 +321,7 @@ class DefaultServer(BaseServer):
                 'python manage.py --no-server' % addrport,
             )
 
-        print "Django's builtin server is running at %s:%d" % addrport
+        print("Django's builtin server is running at %s:%d" % addrport)
 
     def stop(self, fail=False):
         pid = self._server.pid
@@ -349,9 +364,9 @@ try:
                                               port=self.port)
             LiveServerTestCase.setUpClass()
 
-            print "Django's builtin server is running at {address}:{port}".format(
+            print("Django's builtin server is running at {address}:{port}".format(
                 address=self.address,
-                port=self.port)
+                port=self.port))
 
         def stop(self, fail=False):
             LiveServerTestCase.tearDownClass()
