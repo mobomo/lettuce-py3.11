@@ -251,7 +251,7 @@ OUTPUTS = {
                             {
                                 "failure": {
                                     "exception": "RuntimeError()",
-                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 144, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/error_traceback/error_traceback_steps.py\", line 10, in given_my_step_that_blows_a_exception\n    raise RuntimeError\nRuntimeError\n".format(path=BASE_PATH)
+                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 161, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/error_traceback/error_traceback_steps.py\", line 10, in given_my_step_that_blows_a_exception\n    raise RuntimeError\nRuntimeError\n".format(path=BASE_PATH)
                                 },
                                 "meta": {
                                     "failed": True,
@@ -352,7 +352,7 @@ OUTPUTS = {
                             {
                                 "failure": {
                                     "exception": "AssertionError()",
-                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 144, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/unicode_traceback/unicode_traceback_steps.py\", line 10, in given_my_daemi_that_blows_a_exception\n    assert False\nAssertionError\n".format(path=BASE_PATH)
+                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 161, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/unicode_traceback/unicode_traceback_steps.py\", line 10, in given_my_daemi_that_blows_a_exception\n    assert False\nAssertionError\n".format(path=BASE_PATH)
                                 },
                                 "meta": {
                                     "failed": True,
@@ -626,7 +626,7 @@ OUTPUTS = {
                             {
                                 "failure": {
                                     "exception": "Exception(u'\\u0422\\u0435\\u0441\\u0442',)",
-                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 144, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/xunit_unicode_and_bytestring_mixing/xunit_unicode_and_bytestring_mixing_steps.py\", line 16, in raise_nonascii_chars\n    raise Exception(word)\nException: \\u0422\\u0435\\u0441\\u0442\n".format(path=BASE_PATH)
+                                    "traceback": "Traceback (most recent call last):\n  File \"{path}/lettuce/core.py\", line 161, in __call__\n    ret = self.function(self.step, *args, **kw)\n  File \"{path}/tests/functional/output_features/xunit_unicode_and_bytestring_mixing/xunit_unicode_and_bytestring_mixing_steps.py\", line 16, in raise_nonascii_chars\n    raise Exception(word)\nException: \\u0422\\u0435\\u0441\\u0442\n".format(path=BASE_PATH)
                                 },
                                 "meta": {
                                     "failed": True,
