@@ -14,10 +14,12 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+# py3:mod
+import six
 import datetime
 import sys
-from StringIO import StringIO
+# py3:mod
+from six.moves import StringIO
 
 from lettuce.terrain import before, after
 
