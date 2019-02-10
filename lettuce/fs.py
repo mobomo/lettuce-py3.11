@@ -26,6 +26,12 @@ from functools import wraps
 from glob import glob
 from os.path import abspath, join, dirname, curdir, exists
 
+# py3: mod
+import six
+if six.PY2:
+    from imp import reload
+if six.PY3:
+    from six.moves import reload_module as reload
 
 class FeatureLoader(object):
     """Loader class responsible for findind features and step
