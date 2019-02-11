@@ -17,4 +17,6 @@
 	modified:   lettuce/strings.py
 	modified:   lettuce/terrain.py
 	modified:   tests/functional/test_jsonreport_output.py
+	modified:   tox.inx
+	added:      requirements3.txt
 
