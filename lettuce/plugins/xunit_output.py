@@ -24,10 +24,10 @@ from lettuce.strings import utf8_string
 
 def wrt_output(filename, content):
     f = open(filename, "w")
-    if isinstance(content, unicode):
+    if isinstance(content, str):
         content = content.encode('utf-8')
 
-    f.write(content)
+    f.write(content.decode('utf-8'))
     f.close()
 
 
